@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cloud.typography.com/6076934/6331992/css/fonts.css">
-    <link rel="stylesheet" href="../assets/built/screen.css?v=cac15a815d">
+    <link rel="stylesheet" href="../assets/built/screen.css?v=8979100702">
 
     <meta name="description" content="Penjelasan mengenai universal analytic meliputi: deskripsi, manfaat, serta panduan cara menggunakannya di Google Analytics.">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="amphtml" href="amp/index.html">
@@ -187,7 +187,7 @@
                         <time style="font-size: 13px;" class="post-full-meta-date" datetime="2018-07-08">8 July 2018</time>
                             <span style="font-size: 13px;" class="date-divider">/</span> <a style="font-size: 13px;" href="../tag/tutorials/">Tutorials</a>
                     </div>
-                    <hr>
+                    <hr style="margin-bottom:5%;margin-top: 5%;">
                     <p>GA merilis layanan universal analytics. Apa manfaat dan bagaimana cara menerapkannya pada <em>dashboard</em> GA?</p><p>Universal analytic merupakan generasi baru Google analytics. Meski sudah dirilis sejak 2012, saya masih sangat antusias untuk membagikan panduan mengenai hal ini. Kenapa demikian? Karena UA <em>[baca: universal analytics]</em> memiliki 7 fitur serta 4 fitur tambahan yang akan segera dirilis, di antaranya: </p><p><strong>Standard website metrics.</strong> Semua metrik favorit kita ada di dalam layanan ini, misal: visitors, visits, pageviews, time, dst. Selain itu, informasi standart seperti  geographic location, referral sources, marketing campaigns, dst pun ada di dalamnya.</p><p><strong>Ecommerce tracking.</strong> Meski baru, kita tetap bisa mengoleksi data transaksi ecommerce dengan layanan Universal Analytics ini.</p><p><strong>Event tracking.</strong> Fitur ini amat sangat berguna bagi kita untuk men-<em>tracking</em> beragam jenis interaksi audiencs dengan web atau app, misal: reading article.</p><p><strong>AdWords Linking</strong>. Sama halnya dengan classic analytics, kita tetap bisa menghubungkan AdWords account (atau mulitple accounts) dengan Universal Analytics.</p><p><strong>Custom Variables. </strong>Custom variables diganti dengan fitur baru bernama Custom Dimensions. Ada 2 perbedaan mendasar di antara keduanya. Pertama, kita memperoleh tambahan hingga 20 custom dimensions. Kedua, kita hanya butuh skill coding yang minim untuk menerapkan custom dimension di webb atau app. </p><p><strong>Custom Metrics. </strong>Ini merupakan layanan baru yang ada di dalam fitur custom dimensions. Di dalamnya, kita akan bisa melakukan pengaturan spesifik terhadap web atau app kita.</p><p><strong>Easier configuration.</strong> Keunggulan utama layanan GA Universal analytics yaitu mengenai perdorma server. Di masa depan, kita tidak lagi memerlukan kustomisasi JavaScript code. Alasannya, proses integrasi web atau app dengan search engine akan diterapkan secara default.</p><p>Selain 7 fitur itu, Universal analytic pun ditengarai akan menambahkan beberapa fitur lainnya, yaitu:</p><p><strong>Content Experiments.</strong> Di awal rilis, Universal Tracking code tidak mendukung terhadap Content Experiments. Bilamana ingin mendapatkan data dari fitur Content Experiments audiens, maka kita perlu menunggu hingga UA <em>[baca: universal analytic]</em> mendukung layanan tersebut.</p><p><strong>Remarketing with Google Analytics.</strong> Harus kita akui, ini adalah layanan favorit bagi semua digital analytic. Sayangnya, fitur ini belum kita pakai di UA.</p><p><strong>AdSense Integration.</strong> Sebelumnya, kita bisa meng-import AdSense data, seperti revenue, ke dalam Google Analytics. Sayangnya, untuk menikmati fitur ini di UA, kita perlu menunggu beberapa waktu ke depan. </p><p><strong>Cross device tracking.</strong> Ini akan jadi komponen terpenting di UA. Layanan ini diperkirakan akan membantu para digital analytic untuk lebih memahami audiens. Sayangnya, kita perlu menunggu beberapa waktu ke depan supaya bisa mendapat manfaatnya.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="-baru-javascript-tracking-code">[Baru] JavaScript Tracking Code</h2><p>Ada satu hal lagi yang membuat UA berbeda dengan GA sebelumnya, yaitu soal kode tracking JavaScript. UA tidak lagi memakai kode script lama bernama <code>ga.js</code>, melainkan memakai script code bernama <code>analytics.js</code>.</p><p>Kode script ini bisa diimplementasikan di web, mobile apps, dan device jenis lainnya. Untuk saat ini, kita bisa mendapatkan kode script baru ini di Admin Section dashboard GA.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2018/07/1_TrackingCodeForSites.png" class="kg-image"><figcaption>Masukkan kode script UA ini ke dalam halaman web atau screenname apps</figcaption></figure><!--kg-card-end: image--><p>Agar web atau apps kita bisa termonitor di layanan UA, maka tempatkan kode ini di dalam section <code>&lt;head&gt;</code> dan <code>&lt;/head&gt;</code>.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2018/07/3_CodeLocation.png" class="kg-image"><figcaption>Tempatkan kode script di dalam section head</figcaption></figure><!--kg-card-end: image--><p>Selanjutnya, kita akan memperoleh data berupa:</p><ul><li>Visitor count</li><li>Number of visits</li><li>Pageviews</li><li>Geographic location of your visitors</li><li>Referral information</li><li>Device information</li></ul><p>Namun, data tersebut tidak langsung kita terima setelah memasukkan <em>script tracking</em>. Setidaknya, kita harus menunggu antara 4 hingga 24 jam. Setelahnya, kita bisa memperoleh data secara <em>realtime</em>.</p><p>Secara lebih jelas, kode <em>tracking</em> UV kurang lebih akan terlihat seperti demikian:</p><!--kg-card-begin: code--><pre><code>&lt; script &gt;
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -373,6 +373,7 @@ ga('send', 'pageview')
 <div class="floating-header">
     <div class="floating-header-logo">
         <a href="../">
+                <img src="../content/images/2019/03/logo-big-1-1.png" alt="Analogic icon">
             <span>Analogic</span>
         </a>
     </div>
@@ -431,8 +432,8 @@ ga('send', 'pageview')
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script src="../assets/js/jquery.fitvids.js?v=cac15a815d"></script>
-    <script src="../assets/js/index.js?v=cac15a815d"></script>
+    <script src="../assets/js/jquery.fitvids.js?v=8979100702"></script>
+    <script src="../assets/js/index.js?v=8979100702"></script>
 
     <script>
 

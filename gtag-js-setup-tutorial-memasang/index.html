@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cloud.typography.com/6076934/6331992/css/fonts.css">
-    <link rel="stylesheet" href="../assets/built/screen.css?v=cac15a815d">
+    <link rel="stylesheet" href="../assets/built/screen.css?v=8979100702">
 
     <meta name="description" content="Perbandingan fitur gtag.js, ga.js, dan analytics.js. Disertai bedah fitur dan cara integrasi dengan AdWords">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="amphtml" href="amp/index.html">
@@ -187,7 +187,7 @@
                         <time style="font-size: 13px;" class="post-full-meta-date" datetime="2018-07-18">18 July 2018</time>
                             <span style="font-size: 13px;" class="date-divider">/</span> <a style="font-size: 13px;" href="../tag/tutorials/">Tutorials</a>
                     </div>
-                    <hr>
+                    <hr style="margin-bottom:5%;margin-top: 5%;">
                     <p>Simak, <code>gtag.js</code> bukan pengganti <code>ga.js</code> dan <code>analytics.js</code>. Namun, bagaimana dengan yang terlanjur memakai <code>gtag.js</code> "versi lama"?</p><p>Google Analytics telah merilis beberapa Javascript library. Sebelum kemunculan <code>gtag.js</code>, sudah ada <code>ga.js</code>, dan <code>analytics.js</code>. Haruskah kita mengganti <em>library</em> lama dengan versi baru tersebut?</p><p>Sebelum bertindak lebih, mari kita ketahui apa itu <code>gtag.js</code>?</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="mengenal-global-site-tag-atau-gtag-js">Mengenal <em>Global Site Tag</em> atau <code>gtag.js</code></h2><p><code>gtag.js</code> merupakan library dari GA (<em>baca: google analytics</em>) yang paling lengkap, dimana library ini bisa digunakan untuk tracking AdWords dan layanan lain dari Google.</p><p>Ilustrasinya seperti ini:</p><ul><li><code>analytics.js</code> dipergunakan untuk mengukur interaksi <em>user</em> dengan website, lalu mengirim data <code>hits</code> tersebut ke server GA</li><li><code>gtm.js</code> difungsikan sebagai <em>library</em> Google Tag Manager</li><li><code>firebase.js</code> khusus dipakai untuk mengukur interaksi <em>user</em> dengan <em>mobile apps</em> melalui <em>firebase</em></li><li><code>conversion.js</code> diperuntukkan sebagai <em>library</em> <em>tracking</em> konversi AdWords</li></ul><p>Tidak demikian dengan <code>gtag.js</code>. Global Site Tag mampu memuat 4 fungsi dari <em>library</em> di atas hanya dengan <em>single library. </em>Oleh sebab itu, <code>gtag.js</code> jauh lebih sederhana dibanding <em>library-library</em> dari Google lainnya karena:</p><ul><li>Menyimpan banyak tag untuk produk Google di satu tempat (yaitu di dalam kode <code>gtag.js</code>.</li><li>Menyederhanakan pemasangan library untuk memudahkan integrasi produk Google dengan <em>web</em> atau <em>app </em></li><li>Mengirim data ke banyak <em>tools analytic</em> sekaligus,  tidak membutuhkan <code>tag</code> terpisah atau tambahan</li></ul><p>Setelah tahu gambaran mengenai <code>gtag.js</code>, kita masuk ke pembahasan lebih teknis lagi soal script <code>gtag.js</code>.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="gtag-js-dan-adwords"><code>gtag.js</code> dan AdWords</h2><p>Seperti biasa, kita bisa memperoleh <em>Javascript librabry</em> Google di <em>dashboard</em> GA.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2018/07/Screen-Shot-2018-07-19-at-6.32.58-AM.png" class="kg-image"><figcaption>Halaman untun mendapatkan library gtag.js</figcaption></figure><!--kg-card-end: image--><p>Setidaknya, rupa library akan serupa dengan ini:</p><!--kg-card-begin: code--><pre><code>&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
 &lt;script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -391,6 +391,7 @@ ga(‘WebProperty2.send’, ‘pageview’); </code></pre><!--kg-card-end: code-
 <div class="floating-header">
     <div class="floating-header-logo">
         <a href="../">
+                <img src="../content/images/2019/03/logo-big-1-1.png" alt="Analogic icon">
             <span>Analogic</span>
         </a>
     </div>
@@ -449,8 +450,8 @@ ga(‘WebProperty2.send’, ‘pageview’); </code></pre><!--kg-card-end: code-
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script src="../assets/js/jquery.fitvids.js?v=cac15a815d"></script>
-    <script src="../assets/js/index.js?v=cac15a815d"></script>
+    <script src="../assets/js/jquery.fitvids.js?v=8979100702"></script>
+    <script src="../assets/js/index.js?v=8979100702"></script>
 
     <script>
 

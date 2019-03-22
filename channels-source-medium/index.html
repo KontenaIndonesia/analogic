@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cloud.typography.com/6076934/6331992/css/fonts.css">
-    <link rel="stylesheet" href="../assets/built/screen.css?v=cac15a815d">
+    <link rel="stylesheet" href="../assets/built/screen.css?v=8979100702">
 
     <meta name="description" content="Pembahasan secara komprehensif mengenai channels, source, medium di Google analytics disertai screenshot dan review fitur satu-persatu.">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="amphtml" href="amp/index.html">
@@ -187,7 +187,7 @@
                         <time style="font-size: 13px;" class="post-full-meta-date" datetime="2018-07-26">26 July 2018</time>
                             <span style="font-size: 13px;" class="date-divider">/</span> <a style="font-size: 13px;" href="../tag/tutorials/">Tutorials</a>
                     </div>
-                    <hr>
+                    <hr style="margin-bottom:5%;margin-top: 5%;">
                     <p>Istilah <em>channels, source</em>, dan <em>medium</em> selalu muncul di GA [<em>baca: google analytics</em>]. Sudah paham mengenai ketiganya?</p><p>Supaya tidak gamang, saya beritahu terlebih dulu. Di artikel ini, kita akan mempelajari:</p><ul><li>Apa yang dimaksud traffic source dan medium?</li><li>Apa yang dimaksud <em>channel</em> pada konteks Google analytics?</li><li>Jenis <em>channel</em>: <em>default</em> dan <em>custom</em></li><li>Bagaimana GA mendefinisikan: <em>organic search traffic</em>, <em>paid search traffic</em>, <em>direct traffic</em>, <em>email traffic</em>, dan seterusnya.</li><li>Bagaimana cara membuat <em>generic</em>, <em>branded</em>, dan <em>unknown paid search channels</em>?</li><li>Bagaimana cara membuat <em>generic, branded</em>, dan <em>unknown organic search channels</em>?</li></ul><p>Google, sebenarnya, telah menyediakan berbagai laporan <em>acquisition</em> di <em>dashboard</em> GA.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2018/07/Acquisition-reports.jpg" class="kg-image"><figcaption>Menu pada dashboard GA untuk mellihat acquisition report</figcaption></figure><!--kg-card-end: image--><p>Meski secara sekilas sudah tahu maksud <em>report-report</em> tersebut, kita tetap saja perlu memahami <em>channels traffic</em> tersebut dan bagaimana GA mendefinisikannya.</p><p>Akibat <em>misinformasi</em> terkait kedua hal di atas akan mengakibatkan ketidakakuratan analisa <em>online marketing</em>. So, mari kita bahas satu-persatu tentang channels, source, medium pada GA. </p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="apa-makna-source-di-ga">Apa makna <code>Source</code> di GA?</h2><p><em>Source</em> (atau <em>traffic source</em>) merupakan asal <em>traffic website</em>. Umumnya, <em>source traffic</em> ini di-tracking menggunakan parameter <code>utm_source</code>. Misalnya:</p><ul><li><code>google / organic</code>, maka google adalah <em>traffic source website</em></li><li><code>bing / cpc</code>, maka bing adalah <em>traffic source website</em></li><li><code>tripadvisor / referral</code>, maka tripadvisor adalah <em>traffic source website</em></li></ul><blockquote>Perlu kita ketahui: pada GA, penulisan nama "source" sangat sensistif. Penamaan "google", "Google", "GOOGLE", meski bermakna sama (menurut kita) akan dimaknai berbeda oleh GA. Oleh sebab itu, kita perlu memerhatikan cara kita memberi penamaan pada Source.</blockquote><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="apa-definisi-medium-pada-ga">Apa definisi <code>Medium</code> pada GA?</h2><p>Medium atau <em>traffic medium</em> merupakan kategorisasi <em>traffic source website</em> kita. Medium akan dimonitoring oleh GA melalui parameter <code>utm_medium</code>. Contohnya:</p><ul><li><code>google / organic</code>, maka <em>organic</em> merupakan medium-nya.</li><li><code>bing / cpc</code>, maka<em> cpc</em> merupakan medium-nya.</li><li><code>tripadvisor / referral</code>, maka <em>organic</em> merupakan medium-nya.</li></ul><blockquote>Catatan: sama halnya dengan source, penulisan nama pada medium sangat sensitif. Nama "email", "Email", "EMAIL", meski bermakna sama (menurut kita) akan dimaknai berbeda oleh GA. Oleh sebab itu, kita perlu memerhatikan cara kita memberi penamaan pada Medium.</blockquote><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="apa-itu-channel-menurut-ga">Apa itu <code>channel</code> menurut GA?</h2><p><code>Channel</code> atau biasa dikenal marketing channel merupakan grup yang terdiri dari beberapa sumber <em>traffic</em> dengan <code>medium</code> yang sama. Contoh<em> marketing channel</em> yaitu</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2018/07/channels.jpg" class="kg-image"><figcaption>Contoh marketing channel di GA</figcaption></figure><!--kg-card-end: image--><p>Penjelasan mengenai bagian ini sudah saya post di artikel berjudul: <a href="http://localhost:2368/2018/07/26/channel-grouping/">setting channel grouping di google analytics.</a></p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="apa-arti-campaign-di-ga">Apa arti <code>campaign</code> di GA?</h2><p><em>Campaign</em> merupakan nama iklan Google Adwords atau <em>custom campaign</em>.</p><p>Sebagai informasi, <em>custom campaign</em> merupakan marketing campaign yang ditandai dengan menggunakan campaign tracking parameter berupa <code>utm_campaign</code>.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="apa-itu-generic-branded-dan-unknown-organic-search-channel">Apa itu <code>Generic</code>, <code>Branded</code>, dan <code>Unknown</code> <em>organic search channel</em>?</h2><p>Mari kita definisikan satu-persatu:</p><ol><li><code>Generic</code> <em>organic search channel </em>merupakan pelaporan lalu lintas ke <em>website</em> melalui mesin pencari yang berasal dari kata kunci tidak bermerek atau <em>non-branded</em> (juga dikenal sebagai kata kunci umum).</li><li><code>Branded</code> <em>organic search channel</em> merupakan pelaporan lalu lintas ke <em>website</em> melalui mesin pencari yang berasal dari kata kunci bermerek (istilah pencarian yang menyertakan nama merek bisnis kita, misal: gtagjs).</li><li><code>Unknown</code> <em>organic search channel</em> merupakan pelaporan lalu lintas ke <em>website</em> melalui mesin pencari yang berasal dari kata kunci yang tidak memiliki referral data. <em>Penjelasan mengani hal ini akan saya bahas di artikel selanjutnya</em>.</li></ol><p>Adapun cara pengaturan <code>Generic</code>, <code>Branded</code>, dan <code>Unknown</code> <em>organic search channel</em> di GA yaitu</p><!--kg-card-begin: code--><pre><code>&gt; Buka Admin
 &gt; Channel settings
 &gt; Channel grouping
@@ -371,6 +371,7 @@
 <div class="floating-header">
     <div class="floating-header-logo">
         <a href="../">
+                <img src="../content/images/2019/03/logo-big-1-1.png" alt="Analogic icon">
             <span>Analogic</span>
         </a>
     </div>
@@ -429,8 +430,8 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script src="../assets/js/jquery.fitvids.js?v=cac15a815d"></script>
-    <script src="../assets/js/index.js?v=cac15a815d"></script>
+    <script src="../assets/js/jquery.fitvids.js?v=8979100702"></script>
+    <script src="../assets/js/index.js?v=8979100702"></script>
 
     <script>
 
