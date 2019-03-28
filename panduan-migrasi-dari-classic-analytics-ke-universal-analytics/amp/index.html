@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="utf-8">
 
@@ -15,7 +16,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Panduan menggunakan universal analytics untuk pertama kali">
     <meta property="og:description" content="Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.">
-    <meta property="og:url" content="https://analogic.co.id/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
+    <meta property="og:url" content="http://localhost:2368/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1505299344687-ee45ad431f9b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ">
     <meta property="article:published_time" content="2018-07-08T00:02:23.000Z">
     <meta property="article:modified_time" content="2019-03-15T17:28:42.000Z">
@@ -25,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Panduan menggunakan universal analytics untuk pertama kali">
     <meta name="twitter:description" content="Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.">
-    <meta name="twitter:url" content="https://analogic.co.id/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
+    <meta name="twitter:url" content="http://localhost:2368/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1505299344687-ee45ad431f9b?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Fathul Mundzir">
@@ -44,7 +45,7 @@
         "name": "Analogic",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://analogic.co.id/content/images/2019/03/logo-big.jpg",
+            "url": "http://localhost:2368/content/images/2019/03/logo-big.jpg",
             "width": 60,
             "height": 60
         }
@@ -54,17 +55,17 @@
         "name": "Fathul Mundzir",
         "image": {
             "@type": "ImageObject",
-            "url": "https://analogic.co.id/content/images/2019/03/ghost-icon.png",
+            "url": "http://localhost:2368/content/images/2019/03/ghost-icon.png",
             "width": 100,
             "height": 100
         },
-        "url": "https://analogic.co.id/author/fattul/",
+        "url": "http://localhost:2368/author/fattul/",
         "sameAs": [
             "https://twitter.com/ptsovaka"
         ]
     },
     "headline": "Panduan menggunakan universal analytics untuk pertama kali",
-    "url": "https://analogic.co.id/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/",
+    "url": "http://localhost:2368/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/",
     "datePublished": "2018-07-08T00:02:23.000Z",
     "dateModified": "2019-03-15T17:28:42.000Z",
     "image": {
@@ -77,7 +78,7 @@
     "description": "Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://analogic.co.id/"
+        "@id": "http://localhost:2368/"
     }
 }
     </script>
@@ -130,7 +131,7 @@ ga('send', 'pageview')
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');</code></pre><p>Apabila diperhatikan kembali, <code>analytics.js</code> ternyata tidak memuat <em>ecommerce code</em> sama sekali. Pada UV, <em>ecommerce code</em> sengaja di-split (dibuat terpisah) untuk mempercepat load situs. Lalu, dimana meletakkan <em>ecommerce code</em>? Kode ini akan ditempatkan di halaman transaksi.</p><p>Selain itu, <code>analytics.js</code> ini tetap menggunakan kode <em>asynchronous</em>. Kode <em>asynchronous</em> merupakan jenis <em>script tracking</em> yang tidak membuat <em>loading web</em> menjadi lama. </p><p><strong>Kedua.</strong> Bagian selanjutnya terlihat seperti ini:</p><pre><code>ga('create', 'UA-YYYYY-XX', 'namadomain.com');
 ga('send', 'pageview')
-&lt; /script &gt;;</code></pre><p>Secara teknis, kode script tersebut memiliki 2 action:</p><ul><li><em>Action 1</em>: Google Analytics menghubungkan tag ini dengan akun kita. Caranya, dengan menerapkan perintah <code>create</code>. </li><li><em>Action 2</em>: Setelah terhubung, <em>tracking object</em> akan mengirimkan setiap <em>data hit</em> dari web atau app ke server GA kita. <em>Data hits</em> yang dimaksud di sini yaitu <code>pageview</code>. <em>[FYI, pembahasan mengenai data hits sudah dibahas di halaman <a href="https://analogic.co.id/2018/07/06/basic-need-untuk-memahami-digital-analytics-data/">3 jenis data pada digital analytics</a>]</em></li></ul><hr><h2 id="universal-analytics-cookies">Universal Analytics Cookies</h2><p>Soal tracking aktivitas audiens di web, cookies yang digunakan sama seperti GA sebelumnya, yaitu 1 cookie atau <em>first party cookie</em>. Dulu, GA pernah menerapkan 4 hingga 5 cookie. Efek negatifnya, <em>loading</em> situs menjadi lambat.</p><blockquote>Cookies yang kita maksud di sini bukan makanan, melainkan serangkaian teks yang disimpan pada komputer oleh situs web yang kita kunjungi. Sumber: <a href="https://support.mozilla.org/id/kb/Tentang%20Cookie#w_apa-cookie-itu">Mozilla</a></blockquote><p>UV menggunakan <em>first party cookie</em> yang bernama <code>_ga</code> dan terlihat seperti ini:</p><p><code>_ga=1.2.838838867.1359565579161</code> </p><p><em>Note: bisa jadi urutan angka akan berbeda pada cookie situs kita. Perbedaan ini terkustomisasi secara otomatis menyesuaikan web atau app kita.</em> </p><p>Secara teknis, cara kerja cooki sebagai berikut:</p><ul><li>Cookie akan mengidentifikasi identitas pengunjung web. Caranya, seluruh pengunjung akan digeneralisir sebagai <em>anonymous</em>, selanjutnya setiap pengunjung akan mendapat identitas baru berupa <em>random number</em> atau random <em>special character. </em>Selanjutnya, identitas "baru" tersebut akan disimpan pada cookie browser pengunjung.</li><li>Cookie yang berisi identitas "baru" pengunjung ini akan dikirim sepaket dengan data <em>hit</em> (berisi <code>sessions</code>, <code>visits</code>, <code>conversions</code>, <code>pages</code>, dan seterusnya) ke server GA. Pada akhirnya, paket tersebut akan dipergunakan untuk <em>calculate visits, visitors </em>dan<em> campaign metrics. </em></li></ul><p>Umumnya, cookie akan disimpan di browser pengunjung selama 2 tahun. Namun, durasi tersebut bisa kita ubah sesuai kebutuhan. Panduan mengenai cara mengubah durasi cookie bisa kita baca <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#expiration">di sini.</a></p><hr><h2 id="universal-analytics-dan-gtm">Universal Analytics dan GTM</h2><p>Apa itu GTM? GTM adalah singkatan dari Google Tag Manager. Di kesempatan ini, kita mulai berkenalan dengan namanya Google Tag Manager, apa itu?</p><blockquote>Saya kutip dari blog <a href="https://medium.com/skyshidigital/google-tag-manager-tak-kenal-maka-tak-sayang-bagian-1-31f37a5a9e34">Andreas Wijaya</a>, Google Tag Manager merupakan fitur dari Google Analytics (GA) untuk membantu digital marketer me-manage tag. Caranya, GTM akan memetakan kebiasaan audiens di dalam web berdasarkan jenis tag-tag tertentu. Penjelasan lebih lengkap soal GTM akan saya tulis di artikel berikutnya.</blockquote><p>Terkait dengan UV, kita bisa pula mengimplementasikan UV ke dalam dashboard GTM. Caranya:</p><figure class="kg-card kg-image-card kg-card-hascaption"><figcaption>Cara menggunakan universal analytics ke dalam GTM</figcaption></figure><p>Satu hal yang perlu dicatat soal perubahan jenis analytic ini yaitu ia mampu mengukur beragam teknologi (beragam plarform dan device). Oleh sebab itu, di artikel berikutnya topik UV tidak jarang akan ikut terbahas. Dan, pembahasan soal cara menggunakan google analytics akan saya lanjutkan melalui artikel berikutnya. </p><p>Terima kasih, </p><p>Salam.</p><blockquote>Featured image by <a href="https://dribbble.com/Furmanczuk" rel="contact">Magda</a> </blockquote><p></p>
+&lt; /script &gt;;</code></pre><p>Secara teknis, kode script tersebut memiliki 2 action:</p><ul><li><em>Action 1</em>: Google Analytics menghubungkan tag ini dengan akun kita. Caranya, dengan menerapkan perintah <code>create</code>. </li><li><em>Action 2</em>: Setelah terhubung, <em>tracking object</em> akan mengirimkan setiap <em>data hit</em> dari web atau app ke server GA kita. <em>Data hits</em> yang dimaksud di sini yaitu <code>pageview</code>. <em>[FYI, pembahasan mengenai data hits sudah dibahas di halaman <a href="http://localhost:2368/2018/07/06/basic-need-untuk-memahami-digital-analytics-data/">3 jenis data pada digital analytics</a>]</em></li></ul><hr><h2 id="universal-analytics-cookies">Universal Analytics Cookies</h2><p>Soal tracking aktivitas audiens di web, cookies yang digunakan sama seperti GA sebelumnya, yaitu 1 cookie atau <em>first party cookie</em>. Dulu, GA pernah menerapkan 4 hingga 5 cookie. Efek negatifnya, <em>loading</em> situs menjadi lambat.</p><blockquote>Cookies yang kita maksud di sini bukan makanan, melainkan serangkaian teks yang disimpan pada komputer oleh situs web yang kita kunjungi. Sumber: <a href="https://support.mozilla.org/id/kb/Tentang%20Cookie#w_apa-cookie-itu">Mozilla</a></blockquote><p>UV menggunakan <em>first party cookie</em> yang bernama <code>_ga</code> dan terlihat seperti ini:</p><p><code>_ga=1.2.838838867.1359565579161</code> </p><p><em>Note: bisa jadi urutan angka akan berbeda pada cookie situs kita. Perbedaan ini terkustomisasi secara otomatis menyesuaikan web atau app kita.</em> </p><p>Secara teknis, cara kerja cooki sebagai berikut:</p><ul><li>Cookie akan mengidentifikasi identitas pengunjung web. Caranya, seluruh pengunjung akan digeneralisir sebagai <em>anonymous</em>, selanjutnya setiap pengunjung akan mendapat identitas baru berupa <em>random number</em> atau random <em>special character. </em>Selanjutnya, identitas "baru" tersebut akan disimpan pada cookie browser pengunjung.</li><li>Cookie yang berisi identitas "baru" pengunjung ini akan dikirim sepaket dengan data <em>hit</em> (berisi <code>sessions</code>, <code>visits</code>, <code>conversions</code>, <code>pages</code>, dan seterusnya) ke server GA. Pada akhirnya, paket tersebut akan dipergunakan untuk <em>calculate visits, visitors </em>dan<em> campaign metrics. </em></li></ul><p>Umumnya, cookie akan disimpan di browser pengunjung selama 2 tahun. Namun, durasi tersebut bisa kita ubah sesuai kebutuhan. Panduan mengenai cara mengubah durasi cookie bisa kita baca <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#expiration">di sini.</a></p><hr><h2 id="universal-analytics-dan-gtm">Universal Analytics dan GTM</h2><p>Apa itu GTM? GTM adalah singkatan dari Google Tag Manager. Di kesempatan ini, kita mulai berkenalan dengan namanya Google Tag Manager, apa itu?</p><blockquote>Saya kutip dari blog <a href="https://medium.com/skyshidigital/google-tag-manager-tak-kenal-maka-tak-sayang-bagian-1-31f37a5a9e34">Andreas Wijaya</a>, Google Tag Manager merupakan fitur dari Google Analytics (GA) untuk membantu digital marketer me-manage tag. Caranya, GTM akan memetakan kebiasaan audiens di dalam web berdasarkan jenis tag-tag tertentu. Penjelasan lebih lengkap soal GTM akan saya tulis di artikel berikutnya.</blockquote><p>Terkait dengan UV, kita bisa pula mengimplementasikan UV ke dalam dashboard GTM. Caranya:</p><figure class="kg-card kg-image-card kg-card-hascaption"><figcaption>Cara menggunakan universal analytics ke dalam GTM</figcaption></figure><p>Satu hal yang perlu dicatat soal perubahan jenis analytic ini yaitu ia mampu mengukur beragam teknologi (beragam plarform dan device). Oleh sebab itu, di artikel berikutnya topik UV tidak jarang akan ikut terbahas. Dan, pembahasan soal cara menggunakan google analytics akan saya lanjutkan melalui artikel berikutnya. </p><p>Terima kasih, </p><p>Salam.</p><blockquote>Featured image by <a href="https://dribbble.com/Furmanczuk" rel="contact">Magda</a> </blockquote><p></p>
 
             </section>
 
